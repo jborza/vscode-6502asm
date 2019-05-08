@@ -1,0 +1,60 @@
+{
+    "name": "vscode-6502asm",
+    "icon": "images/icon.png",
+    "displayName": "6502asm Assembler Language Support (6502)",
+    "description": "Provides language support for the 6502asm assembler.",
+    "version": "1.0.0",
+    "publisher": "jborza",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jborza/vscode-6502asm"
+    },
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:6502asm"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "6502asm",
+                "aliases": [
+                    "6502 Assembly",
+                    "6502"
+                ],
+                "extensions": [
+                    ".asm",
+                    ".a65"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "6502asm",
+                "scopeName": "source.6502asm",
+                "path": "./syntaxes/6502asm.tmLanguage.json"
+            }
+        ],
+        "problemMatchers": [],
+        "taskDefinitions": []
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^3.3.1",
+        "vscode": "^1.1.28",
+        "tslint": "^5.12.1",
+        "@types/node": "^10.12.21"
+    }
+}

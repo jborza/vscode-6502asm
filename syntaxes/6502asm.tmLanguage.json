@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "6502 Assembly",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#opcodes"
+		},
+		{
+			"include": "#controlcommands"
+		},
+		{
+			"include": "#labels"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.6502asm",
+				"match": ";.*$"
+			}]
+		},
+		"punctuation": {
+			"patterns": [{
+				"name": "punctuation.parenthesis.6502asm",
+				"match": "\\(|\\)"
+			}, {
+				"name": "punctuation.separator.6502asm",
+				"match": ","
+			}]
+		},
+		"literals": {
+			"patterns": [{
+				"name": "constant.numeric.hex.6502asm",
+				"match": "(\\$[0-9A-Fa-f]+\\b)|\\b([0-9A-Fa-f]+h\\b)"
+			}, {
+				"name": "constant.numeric.decimal.6502asm",
+				"match": "\\b[0-9]+\\b"
+			}, {
+				"name": "constant.language.unnamed-label.6502asm",
+				"match": ":-+|:\\++"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operators.immediate.6502asm",
+				"match": "#"
+			}]
+		},
+		"opcodes": {
+			"patterns": [{
+				"comment": "6502 Opcodes",
+				"name": "keyword.other.opcode.6502asm.6502",
+				"match": "\\b(?i:adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr|lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya)\\b"
+			}]
+		},
+		"controlcommands": {
+			"patterns": [{
+				"name": "keyword.control.controlcommand.6502asm",
+				"match": "\\.(?i:dcb|define)\\b"
+			}]
+		},
+		"labels": {
+			"patterns": [{
+				"name": "entity.name.label.6502",
+				"match": "^\\s*\\S*:"
+			}]
+		}
+	},
+	"scopeName": "source.6502asm"
+}
