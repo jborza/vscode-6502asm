@@ -6,6 +6,8 @@ This extension provides syntax highlighting for use with the (6502asm)[http://ww
 
 All 6502 opcodes are supported by the syntax highlighter, plus definitions specific to the 6502asm JavaScript family of assemblers (`define` and `dcb`)
 
+![Syntax Highlighting](images/6502asm-highlight.png)
+
 Kind regards to (@tlgkccampbell)[https://github.com/tlgkccampbell] for his work on the (code-ca65)[https://github.com/tlgkccampbell/code-ca65] extension.
 
 ## Release Notes
