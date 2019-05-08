@@ -6,6 +6,9 @@
 			"include": "#comments"
 		},
 		{
+			"include": "#registers"
+		},
+		{
 			"include": "#punctuation"
 		},
 		{
@@ -20,6 +23,7 @@
 		{
 			"include": "#controlcommands"
 		},
+		
 		{
 			"include": "#labels"
 		}
@@ -55,7 +59,7 @@
 		"operators": {
 			"patterns": [{
 				"name": "keyword.operators.immediate.6502asm",
-				"match": "#"
+				"match": "#>|#<|#"
 			}]
 		},
 		"opcodes": {
@@ -68,12 +72,18 @@
 		"controlcommands": {
 			"patterns": [{
 				"name": "keyword.control.controlcommand.6502asm",
-				"match": "\\.(?i:dcb|define)\\b"
+				"match": "\\b(?i:dcb|define)\\b"
+			}]
+		},
+		"registers": {
+			"patterns": [{
+				"name": "entity.name.variable.6502asm",
+				"match": ",[xyXY]\\b"
 			}]
 		},
 		"labels": {
 			"patterns": [{
-				"name": "entity.name.label.6502",
+				"name": "entity.name.function.6502asm",
 				"match": "^\\s*\\S*:"
 			}]
 		}
