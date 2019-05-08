@@ -1,4 +1,4 @@
-# 6502asm Assembler Language Supp
+# Visual Studio Code 6502asm Assembler Language Support
 
 This extension provides syntax highlighting for use with the [6502asm](http://www.6502asm.com) and [Easy 6502](http://skilldrick.github.io/easy6502) variant of 6502 assembly.
 
