@@ -1,0 +1,92 @@
+.widget {
+  width: 800px;
+  margin: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.buttons {
+  margin: 8px 0;
+}
+
+.start, .length {
+  width: 50px;
+}
+
+.widget pre {
+  margin: 0;
+  padding: 0;
+  background: inherit;
+  border: none;
+  font-size: 11px;
+  color: #222;
+}
+
+.code {
+  margin: 0 0 6px 0;
+  padding: 6px;
+  border: 1px solid black;
+  width: 440px;
+  height: 450px;
+  font-family: monospace;
+  font-size: 11px;
+  overflow: auto;
+  float: left;
+}
+
+.screen {
+  float: right;
+}
+
+.debugger {
+  border: 1px black solid;
+  margin-top: 6px;
+  padding: 3px;
+  padding-top: 8px;
+  height: 125px;
+  width: 310px;
+  text-align: center;
+  float: right;
+}
+
+.minidebugger {
+  margin: 0;
+  margin-top: 6px;
+  padding: 0;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.monitorControls {
+  width: 440px;
+  clear: both;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.monitorControls input {
+  margin-right: 0.5em;
+}
+
+.monitor {
+  margin: 10px 0;
+  padding: 6px;
+  border: 1px solid #999;
+  background-color: #ddd;
+  width: 440px;
+  height: 100px;
+  overflow: auto;
+  display: none;
+}
+
+.messages {
+  margin: 0;
+  padding: 6px;
+  border: 1px solid #999;
+  background-color: #eee;
+  overflow: auto;
+  width: 440px;
+  height: 100px;
+  text-align: left;
+  font-size: 11px;
+}

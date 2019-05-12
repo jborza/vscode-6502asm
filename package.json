@@ -43,7 +43,13 @@
             }
         ],
         "problemMatchers": [],
-        "taskDefinitions": []
+        "taskDefinitions": [],
+        "commands":[
+            {
+                "command": "6502asm.emulate",
+                "title": "6502 Run"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
