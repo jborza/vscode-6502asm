@@ -3,7 +3,7 @@
     "icon": "images/icon.png",
     "displayName": "6502asm Assembler Language Support (6502)",
     "description": "Provides language support for the 6502asm assembler.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "jborza",
     "repository": {
         "type": "git",
