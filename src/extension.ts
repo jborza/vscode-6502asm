@@ -7,13 +7,12 @@ import {EmulatorPanel} from './emulatorPanel';
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	let workspaceRoot = vscode.workspace.rootPath;
-	if (workspaceRoot) {
-		// ...
-	}
+	
 
 	context.subscriptions.push(vscode.commands.registerCommand('6502asm.emulate', () => {
-        EmulatorPanel.createOrShow(context.extensionPath);
+		EmulatorPanel.createOrShow(context.extensionPath);
+
+		EmulatorPanel.setCodeFromActiveEditor();
 	}));
 }
 

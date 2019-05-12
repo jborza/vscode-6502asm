@@ -2686,6 +2686,19 @@ function SimulatorWidget(node) {
   initialize();
 }
 
+//handle message from the extension
+window.addEventListener('message', event => {
+  const message = event.data;
+  switch(message.command){
+    case 'setCode':
+      $('.code').val(message.data);
+      break;
+    case 'assemble':
+      $('.assembleButton').click();
+      break;
+  }
+});
+
 $(document).ready(function () {
   $('.widget').each(function () {
     SimulatorWidget(this);
